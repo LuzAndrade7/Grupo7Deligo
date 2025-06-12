@@ -3,5 +3,6 @@
     <string name="back">Volver</string>
     <string name="IngresaNumero">Ingresa tu número telefónico</string>
     <string name="NumeroPais">+593  número telefónico</string>
+    <string name="TextContinue">Continuar</string>
 
 </resources>
