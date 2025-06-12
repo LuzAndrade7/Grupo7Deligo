@@ -33,7 +33,7 @@
             android:id="@+id/textViewPhoneTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="24sp"
             android:fontFamily="@font/montserrat"
             android:text="@string/IngresaNumero"
             android:textAlignment="center"
