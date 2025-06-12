@@ -11,6 +11,7 @@
     <color name="colorAccent">#FFD54F</color>          <!-- Amarillo acento -->
     <color name="textPrimary">#212121</color>
     <color name="colorContinue">#6606C169</color>
+    <color name="Grey">#999999</color>
 
 
 </resources>
