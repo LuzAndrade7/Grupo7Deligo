@@ -5,8 +5,5 @@
     <string name="NumeroPais">+593  número telefónico</string>
     <string name="TextContinue">Continuar</string>
     <string name="TextO">O</string>
-    <string name="TextInicioApple">Continuar con Apple</string>
-    <string name="TextInicioGoogle">Continuar con Google</string>
-    <string name="TextIinicioEmail">Continuar con Email</string>
 
 </resources>
