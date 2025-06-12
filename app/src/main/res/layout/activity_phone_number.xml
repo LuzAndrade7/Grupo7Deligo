@@ -14,7 +14,7 @@
 
         <!-- Flecha de regreso -->
 
-       <ImageView
+        <ImageView
             android:id="@+id/imageViewBack"
             android:layout_width="55dp"
             android:layout_height="55dp"
