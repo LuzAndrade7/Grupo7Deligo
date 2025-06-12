@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Grupo7Deligo</string>
-    <string name="HolaMundo" />
-    <string name="holaaa" />
-    <string name="textViewTitle">Hola</string>
+    <string name="back">Volver</string>
+    <string name="IngresaNumero">Ingresa tu número telefónico</string>
+    <string name="NumeroPais">+593  número telefónico</string>
+
 </resources>

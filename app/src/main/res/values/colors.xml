@@ -5,7 +5,10 @@
 
     <!-- Colores personalizados del proyecto -->
     <color name="colorSplashBackground">#D25973</color> <!-- Fondo splash -->
+    <color name="colorRectangle">#E1E1E1</color>
     <color name="colorPrimaryLight">#FF8A80</color>    <!-- Un rojo claro -->
     <color name="colorPrimaryDark">#C62828</color>     <!-- Rojo más fuerte -->
     <color name="colorAccent">#FFD54F</color>          <!-- Amarillo acento -->
+    <color name="textPrimary">#212121</color>
+
 </resources>
