@@ -5,5 +5,32 @@
     <string name="NumeroPais">+593  número telefónico</string>
     <string name="TextContinue">Continuar</string>
     <string name="TextO">O</string>
+    <string name="facultad_de_sistemas_epn">Facultad de Sistemas EPN</string>
+    <string name="trabajo">Trabajo</string>
+    <string name="agregar_nuevo">Agregar nuevo</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="nombre">Kate Tanner</string>
+    <string name="direcciones_guardadas">Direcciones guardadas</string>
+    <string name="iconocasa">iconoCasa</string>
+    <string name="iconotrabajo">iconotrabajo</string>
+    <string name="iconoagregar">icono_agregar</string>
+    <string name="iconosalir">icono_salir</string>
+    <string name="editar_cuenta">Editar cuenta</string>
+    <string name="icono_user">iconouser</string>
+    <string name="ver_cuenta">Ver cuenta</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="tus_favoritos">Tus favoritos</string>
+    <string name="cartera">Cartera</string>
+    <string name="preferencias_del_negocio">Preferencias del negocio</string>
+    <string name="agregar_los_favoritos_de_tu_negocio_de_forma_m_s_r_pida_y_sencilla">Agregar los favoritos de tu negocio de forma más rápida y sencilla</string>
+    <string name="regalo">regalo</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="promociones">Promociones</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="env_o_con_uber">Envío con Uber</string>
+    <string name="Inicio">Inicio</string>
+    <string name="explorar">Explorar</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="cuenta">Cuenta</string>
 
 </resources>
