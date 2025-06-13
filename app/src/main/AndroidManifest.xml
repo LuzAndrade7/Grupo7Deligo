@@ -22,9 +22,6 @@
             android:name=".Browser"
             android:exported="false" />
         <activity
-            android:name=".Brows"
-            android:exported="false" />
-        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
