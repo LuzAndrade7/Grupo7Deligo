@@ -2,7 +2,8 @@
     <string name="app_name">Grupo7Deligo</string>
     <string name="back">Volver</string>
     <string name="IngresaNumero">Ingresa tu número telefónico</string>
-    <string name="NumeroPais">+593  número telefónico</string>
+    <string name="CodNumero">+593</string>
+    <string name="Numero">número de teléfono</string>
     <string name="TextContinue">Continuar</string>
     <string name="TextO">O</string>
     <string name="TextInicioApple">Continuar con Apple</string>
@@ -94,5 +95,6 @@
     <string name="min">25 &#8211; 35 min</string>
     <string name="pizza">Pizza</string>
     <string name="compra_1_y_ll_vate_1_gratis">Compra 1 y llévate 1 gratis</string>
+
 
 </resources>

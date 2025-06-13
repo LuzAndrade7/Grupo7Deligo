@@ -105,8 +105,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:fontFamily="@font/montserrat"
-                    android:text="+593"
-                    android:textColor="@color/Grey"
+                    android:text="@string/CodNumero"
+                    android:textColor="@color/dark_grey"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -118,12 +118,12 @@
                     android:layout_weight="1"
                     android:background="@null"
                     android:fontFamily="@font/montserrat"
-                    android:hint="número telefónico"
-                    android:textColorHint="@color/Grey"
-                    android:textColor="@color/Grey"
+                    android:hint="@string/Numero"
                     android:inputType="phone"
                     android:maxLines="1"
-                    android:textSize="16sp"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
