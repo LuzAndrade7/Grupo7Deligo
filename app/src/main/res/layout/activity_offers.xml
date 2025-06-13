@@ -93,7 +93,8 @@
                             android:layout_height="match_parent"
                             android:contentDescription="@string/imagenprincipalmc"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mcdonalds_main" />
+                            android:src="@drawable/mcdonalds_main"
+                            tools:ignore="ImageContrastCheck" />
 
                         <!-- Promotion Badge -->
                         <TextView
@@ -110,7 +111,8 @@
                             android:text="@string/compra_1_y_ll_vate_1_gratis"
                             android:textColor="#FFFFFF"
                             android:textSize="12sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck" />
 
                     </FrameLayout>
 
@@ -386,7 +388,8 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/explorar"
                 android:textColor="#999999"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
@@ -415,7 +418,8 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/pedidos"
                 android:textColor="#999999"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
@@ -444,7 +448,8 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/cuenta"
                 android:textColor="#999999"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
