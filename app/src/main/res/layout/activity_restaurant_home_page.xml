@@ -10,8 +10,8 @@ android:background="#F5F5F5"
 tools:context=".RestaurantHomePage">
 
     <ScrollView
-        android:layout_width="508dp"
-        android:layout_height="916dp"
+        android:layout_width="404dp"
+        android:layout_height="866dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,15 +28,15 @@ tools:context=".RestaurantHomePage">
             <!-- Header con imagen principal y controles -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="216dp">
 
                 <!-- Imagen principal del combo -->
                 <ImageView
                     android:id="@+id/iv_main_combo"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
+                    android:layout_height="218dp"
                     android:contentDescription="@string/imagenprincipalmc"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/mcdonalds_main" />
 
 
@@ -49,8 +49,8 @@ tools:context=".RestaurantHomePage">
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="60dp"
                     android:background="@drawable/bg_circle_light"
-                    android:padding="8dp"
                     android:contentDescription="@string/iconoregresar"
+                    android:padding="8dp"
                     android:src="@drawable/ic_back_arrow" />
 
                 <!-- Botón de favorito -->
@@ -60,15 +60,18 @@ tools:context=".RestaurantHomePage">
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="60dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="28dp"
                     android:background="@drawable/bg_circle_light"
-                    android:padding="8dp"
                     android:contentDescription="@string/boton_favoritos"
+                    android:padding="8dp"
                     android:src="@drawable/ic_corazoncircular" />
 
             </RelativeLayout>
 
             <!-- Información del restaurante -->
+
+            <!-- Separador -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -145,7 +148,6 @@ tools:context=".RestaurantHomePage">
 
             </LinearLayout>
 
-            <!-- Separador -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="8dp"
@@ -217,7 +219,8 @@ tools:context=".RestaurantHomePage">
                         android:layout_marginTop="4dp"
                         android:text="@string/detalles_envio"
                         android:textColor="#666666"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="TextContrastCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -225,7 +228,8 @@ tools:context=".RestaurantHomePage">
                         android:layout_marginTop="8dp"
                         android:text="@string/enlace"
                         android:textColor="#00AA00"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="TextContrastCheck" />
 
                 </LinearLayout>
 
@@ -263,7 +267,8 @@ tools:context=".RestaurantHomePage">
                         android:paddingVertical="12dp"
                         android:text="@string/mccombos"
                         android:textColor="#666666"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
 
                     <ImageView
                         android:layout_width="24dp"
@@ -358,8 +363,8 @@ tools:context=".RestaurantHomePage">
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/imagenitem"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/big_mac_combo" />
 
             </LinearLayout>

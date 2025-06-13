@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/main"
     android:padding="24dp">
 
     <LinearLayout
@@ -40,8 +41,10 @@
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:autofillHints=""
             android:background="@drawable/bg_input_rectangle"
             android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:textColor="@color/black"
@@ -69,13 +72,15 @@
             android:layout_height="50dp"
             android:background="@drawable/bg_input_rectangle"
             android:hint="@string/hint_first_name"
+            android:inputType="textPersonName"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:textColor="@color/black"
             android:textColorHint="@color/dark_grey"
             android:fontFamily="@font/montserrat"
             android:textSize="14sp"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            tools:ignore="Autofill" />
 
         <!-- Apellido -->
         <EditText
@@ -84,13 +89,15 @@
             android:layout_height="50dp"
             android:background="@drawable/bg_input_rectangle"
             android:hint="@string/hint_last_name"
+            android:inputType="textPersonName"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:textColor="@color/black"
             android:textColorHint="@color/dark_grey"
             android:fontFamily="@font/montserrat"
             android:textSize="14sp"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            tools:ignore="Autofill" />
 
         <!-- Título contraseña -->
         <TextView
@@ -118,7 +125,8 @@
             android:textColorHint="@color/dark_grey"
             android:fontFamily="@font/montserrat"
             android:textSize="14sp"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            tools:ignore="Autofill" />
 
         <!-- Botón continuar -->
         <com.google.android.material.button.MaterialButton
