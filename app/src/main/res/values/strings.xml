@@ -81,11 +81,10 @@
     <string name="totalp">$ 7.01</string>
     <string name="cr_ditos_0_00">Créditos 0.00</string>
     <string name="agregar_tus_datos">Agregar tus datos</string>
-    <string name="pedir">Pedir</string>
     <string name="icono_datos">icono_datos</string>
     <string name="retiro">Retiro</string>
-    <string name="busca_aqu">Busca aquí...</string>
-    <string name="dir">Av. 12 de Octubre ...</string>
+    <string name="busca_aqu">Busca aquí…</string>
+    <string name="dir">Av. 12 de Octubre …</string>
     <string name="icono_cambiarubi">Cambiar ubicación</string>
     <string name="ofertas">Ofertas</string>
     <string name="recomendaciones">Recomendaciones</string>
@@ -102,9 +101,13 @@
     <string name="hint_last_name">Apellido</string>
     <string name="enter_password">Ingrese una contraseña</string>
     <string name="hint_password">Contraseña</string>
-
-
-
-
+    <string name="buscar">Buscar</string>
+    <string name="costo">Costo</string>
+    <string name="filtro">filtro</string>
+    <string name="Nresultado">56 resultados para \"pizza\"</string>
+    <string name="pizza_italian_salads">Pizza • Italian • Salads</string>
+    <string name="pizza_lugar">Pizza Lugar</string>
+    <string name="pizza_italian_pasta">Pizza • Italian • Pasta</string>
+    <string name="pagar">Pagar</string>
 
 </resources>
