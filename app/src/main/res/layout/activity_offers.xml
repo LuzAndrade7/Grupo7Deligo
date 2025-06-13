@@ -23,7 +23,8 @@
         android:paddingBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="42dp">
+        tools:layout_editor_absoluteY="42dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/iv_back_arrow"
@@ -368,7 +369,8 @@
             android:gravity="center"
             android:orientation="vertical"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp">
+            android:paddingBottom="8dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/iv_nav_explorar"
@@ -425,7 +427,8 @@
             android:gravity="center"
             android:orientation="vertical"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp">
+            android:paddingBottom="8dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/iv_nav_cuenta"
