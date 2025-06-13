@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Botón de retroceso -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:padding="12dp"
+            android:background="@drawable/bg_circle_light"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="@string/back" />
+
+        <!-- Pregunta de correo -->
+        <TextView
+            android:id="@+id/textEmailQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_email"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <!-- Input de correo -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_rectangle"
+            android:hint="@string/hint_email"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_grey"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Título datos personales -->
+        <TextView
+            android:id="@+id/textYourData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_data"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <!-- Nombre -->
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_rectangle"
+            android:hint="@string/hint_first_name"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_grey"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Apellido -->
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_rectangle"
+            android:hint="@string/hint_last_name"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_grey"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Título contraseña -->
+        <TextView
+            android:id="@+id/textPasswordTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_password"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <!-- Contraseña -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_rectangle"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_grey"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botón continuar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonContinue"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/TextContinue"
+            android:backgroundTint="@color/colorContinue"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:cornerRadius="6dp" />
+
+    </LinearLayout>
+</ScrollView>

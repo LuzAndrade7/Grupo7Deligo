@@ -95,6 +95,16 @@
     <string name="min">25 &#8211; 35 min</string>
     <string name="pizza">Pizza</string>
     <string name="compra_1_y_ll_vate_1_gratis">Compra 1 y llévate 1 gratis</string>
+    <string name="question_email">¿Cuál es tu correo electrónico?</string>
+    <string name="enter_your_data">Ingresa tu correo electrónico</string>
+    <string name="hint_email">Ingresa tus datos</string>
+    <string name="hint_first_name">Nombre</string>
+    <string name="hint_last_name">Apellido</string>
+    <string name="enter_password">Ingrese una contraseña</string>
+    <string name="hint_password">Contraseña</string>
+
+
+
 
 
 </resources>
