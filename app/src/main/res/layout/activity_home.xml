@@ -252,7 +252,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:contentDescription="@string/imagenprincipalmc"
-                    android:src="@drawable/mcdonalds_main"
+                    android:src="@drawable/menumontubio1"
                     android:scaleType="centerCrop" />
 
                 <!-- Restaurant Info -->
@@ -274,7 +274,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/mcdonald_s"
+                            android:text="@string/LocalMontubio"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -351,7 +351,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:contentDescription="@string/imagenprincipalmc"
-                    android:src="@drawable/mcdonalds_main"
+                    android:src="@drawable/menusalchipapa2"
                     android:scaleType="centerCrop" />
 
             </LinearLayout>

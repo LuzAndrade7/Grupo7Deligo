@@ -37,7 +37,7 @@ tools:context=".RestaurantHomePage">
                     android:layout_height="218dp"
                     android:contentDescription="@string/imagenprincipalmc"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/mcdonalds_main" />
+                    android:src="@drawable/menumontubio1" />
 
 
                 <!-- Botón de regreso -->
@@ -60,7 +60,7 @@ tools:context=".RestaurantHomePage">
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="60dp"
-                    android:layout_marginEnd="28dp"
+                    android:layout_marginEnd="48dp"
                     android:background="@drawable/bg_circle_light"
                     android:contentDescription="@string/boton_favoritos"
                     android:padding="8dp"
@@ -83,7 +83,7 @@ tools:context=".RestaurantHomePage">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mcdonald_s"
+                    android:text="@string/LocalMontubio"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -92,7 +92,7 @@ tools:context=".RestaurantHomePage">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/restaurante_de_comida_r_pida"
+                    android:text="@string/restauranteMontubio"
                     android:textColor="#666666"
                     android:textSize="16sp" />
 
