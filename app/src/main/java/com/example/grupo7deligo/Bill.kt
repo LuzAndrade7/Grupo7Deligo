@@ -99,21 +99,7 @@ class Bill : AppCompatActivity() {
     }
 
     private fun configurarOtrasOpciones() {
-        findViewById<LinearLayout>(R.id.gift_option).setOnClickListener {
-            mostrarMensaje("Función de regalo próximamente")
-        }
 
-        findViewById<LinearLayout>(R.id.coupon_option).setOnClickListener {
-            mostrarMensaje("No tienes cupones disponibles")
-        }
-
-        findViewById<LinearLayout>(R.id.credits_section).setOnClickListener {
-            mostrarMensaje("Créditos: $0.00")
-        }
-
-        findViewById<LinearLayout>(R.id.add_data_section).setOnClickListener {
-            mostrarMensaje("Función para agregar datos próximamente")
-        }
     }
 
     private fun mostrarMensaje(mensaje: String) {
