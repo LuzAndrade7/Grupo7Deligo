@@ -1,23 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorSplashBackground">
+    android:background="@color/colorSplashBackground"
+    tools:context=".SplashActivity">
 
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/logo_deligo"
-        android:background="@drawable/bg_rounded_mask"
-        android:scaleType="centerCrop"
-        android:clipToOutline="true"
-        app:layout_constraintTop_toTopOf="parent"
+    <!-- Contenedor para la imagen y el texto -->
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="107dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974">
 
+        <!-- Logo de la app -->
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="Logo Deligo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_deligo"
+            android:background="@drawable/bg_rounded_mask"/>
+
+        <!-- Texto -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nexa"
+            android:text="Deligo"
+            android:textColor="@color/colorSplashText"
+            android:textSize="36sp"/>
+
+        <!-- Frase de bienvenida -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/splashText"
+        android:layout_width="330dp"
+        android:layout_height="182dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/cake_bold_font"
+        android:gravity="center"
+        android:text="@string/FraseInicial"
+        android:textColor="@color/colorSplashText"
+        android:textSize="62sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

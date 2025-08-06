@@ -1,24 +1,21 @@
 package com.example.deligo
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Redirige automáticamente a PhoneNumberActivity después de 2 segundos
+        // Redirige automáticamente a la pantalla Home después de 3 segundos
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, PhoneNumberActivity::class.java)
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 3000) // 3 segundos de espera para que se vea la pantalla de splash
     }
 }

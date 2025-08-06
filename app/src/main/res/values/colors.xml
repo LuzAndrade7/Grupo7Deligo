@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Colores personalizados del proyecto -->
-    <color name="colorSplashBackground">#DEF3F3</color> <!-- Fondo splash -->
+    <color name="colorSplashBackground">#1C1B20</color> <!-- Fondo splash -->
+    <color name="colorSplashText">#D43E56</color>
     <color name="colorRectangle">#E1E1E1</color>
     <color name="colorPrimaryLight">#FF8A80</color>    <!-- Un rojo claro -->
     <color name="colorPrimaryDark">#C62828</color>     <!-- Rojo más fuerte -->

@@ -109,5 +109,7 @@
     <string name="pizza_lugar">Pizza Lugar</string>
     <string name="pizza_italian_pasta">Pizza • Italian • Pasta</string>
     <string name="pagar">Pagar</string>
+    <string name="FraseInicial">Tu comida, tu barrio, tu Deligo.</string>
+
 
 </resources>
