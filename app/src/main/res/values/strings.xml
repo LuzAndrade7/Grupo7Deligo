@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grupo7Deligo</string>
+    <string name="app_name">Deligo</string>
     <string name="back">Volver</string>
     <string name="IngresaNumero">Ingresa tu número telefónico</string>
     <string name="CodNumero">+593</string>

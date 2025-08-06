@@ -1,4 +1,4 @@
-package com.example.grupo7deligo
+package com.example.deligo
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog

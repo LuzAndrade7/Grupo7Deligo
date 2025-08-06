@@ -1,4 +1,4 @@
-package com.example.grupo7deligo
+package com.example.deligo
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

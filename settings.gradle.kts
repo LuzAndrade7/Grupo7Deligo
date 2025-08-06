@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Grupo7Deligo"
+rootProject.name = "Deligo"
 include(":app")
  
