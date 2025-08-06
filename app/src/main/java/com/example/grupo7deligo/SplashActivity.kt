@@ -11,11 +11,12 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Redirige automáticamente a la pantalla Home después de 3 segundos
+        // Redirige a PhoneNumberActivity después de 3 segundos
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Home::class.java)
+            val intent = Intent(this, PhoneNumberActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000) // 3 segundos de espera para que se vea la pantalla de splash
+        }, 3000) // 3 segundos
     }
 }
+

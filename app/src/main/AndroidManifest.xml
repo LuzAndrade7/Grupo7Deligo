@@ -16,6 +16,11 @@
         <activity
             android:name=".RegistroActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".CreditCardPaymentActivity"
+            android:exported="true" />
+
         <activity
             android:name=".Offers"
             android:exported="false" />
@@ -42,13 +47,12 @@
             android:exported="false"/>
         <activity
             android:name=".PhoneNumberActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
