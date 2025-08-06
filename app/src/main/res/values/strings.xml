@@ -110,11 +110,24 @@
     <string name="pizza_italian_pasta">Pizza • Italian • Pasta</string>
     <string name="pagar">Pagar</string>
     <string name="FraseInicial">Tu comida, tu barrio, tu Deligo.</string>
+
+    <!-- LOCALES -->
     <string name="LocalRosita">Restaurante Doña Rosita</string>
     <string name="LocalMontubio">Del Montubio</string>
     <string name="LocalSalchipapas">Hueca de Salchipapas</string>
     <string name="LocalTripitas">Tripitas de la esquina</string>
     <string name="restauranteRosita">Restaurante tradicional</string>
     <string name="restauranteMontubio">Restaurante de comida costeña</string>
+
+    <!-- FACTURA -->
+    <string name="direccionEntrega">Dirección de entrega</string>
+    <string name="metodoPago">Método de pago</string>
+    <string name="pagoEfectivo">Efectivo</string>
+    <string name="pagoTarjeta">Tarjeta</string>
+    <string name="hint_card">Número de tarjeta</string>
+    <string name="icono_ubicacion">icono_ubicacion</string>
+    <string name="icono_de_pago">icono_pago</string>
+    <string name="icono_de_tarjeta">icono_tarjeta</string>
+
 
 </resources>

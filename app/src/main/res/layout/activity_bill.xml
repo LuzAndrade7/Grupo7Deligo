@@ -57,74 +57,115 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Gift Option -->
+            <!-- Dirección de Envío -->
             <LinearLayout
-                android:id="@+id/gift_option"
+                android:id="@+id/direction_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@android:color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="16dp"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="8dp">
-
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:layout_marginTop="8dp">
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_regalo"
-                    android:contentDescription="@string/regalo"
-                    android:layout_marginEnd="12dp" />
-
+                    android:src="@drawable/ic_locat"
+                    android:contentDescription="@string/icono_ubicacion" />
                 <TextView
+                    android:id="@+id/textViewAddress"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/hacer_un_regalo"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black" />
-
+                    android:text="@string/direccionEntrega"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="8dp" />
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_right"
-                    android:contentDescription="@string/icono_vermas" />
-
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    android:contentDescription="@string/icono_desplegable" />
             </LinearLayout>
 
-            <!-- Coupon Option -->
+            <!-- Método de Pago -->
             <LinearLayout
-                android:id="@+id/coupon_option"
+                android:id="@+id/payment_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@android:color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="16dp"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="16dp">
-
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:layout_marginTop="8dp">
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_promocion"
-                    android:contentDescription="@string/promociones"
-                    android:layout_marginEnd="12dp" />
-
+                    android:src="@drawable/ic_money"
+                    android:contentDescription="@string/icono_de_pago" />
                 <TextView
+                    android:id="@+id/textViewPaymentMethod"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/tienes_un_cup_n"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black" />
+                    android:text="@string/metodoPago"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="8dp" />
 
+                <!-- Método de pago desplegable -->
+                <RadioGroup
+                    android:id="@+id/paymentOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbCash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pagoEfectivo"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pagoTarjeta"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Número de tarjeta  -->
+            <LinearLayout
+                android:id="@+id/card_number_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:contentDescription="@string/icono_vermas"
-                    android:src="@drawable/ic_right" />
+                    android:src="@drawable/ic_credit_card"
+                    android:contentDescription="@string/icono_de_tarjeta" />
 
+                <EditText
+                    android:id="@+id/editTextCardNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_card"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="8dp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:autofillHints="creditCardNumber" />
             </LinearLayout>
 
             <!-- Order Summary -->
@@ -243,84 +284,11 @@
 
             </LinearLayout>
 
-            <!-- Credits Section -->
-            <LinearLayout
-                android:id="@+id/credits_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@android:color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="16dp"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/env_o_con_uber"
-                    android:src="@drawable/ic_uber" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/cr_ditos_0_00"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@string/icono_vermas"
-                    android:src="@drawable/ic_right" />
-
-            </LinearLayout>
-
-            <!-- Add Data Section -->
-            <LinearLayout
-                android:id="@+id/add_data_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@android:color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="16dp"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@string/icono_datos"
-                    android:src="@drawable/ic_dato"
-                    android:layout_marginEnd="12dp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/agregar_tus_datos"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/agregar"
-                    android:textColor="#007AFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>
 
     <!-- Product Summary Section -->
-
-    <!-- Order Button -->
     <LinearLayout
         android:id="@+id/product_summary"
         android:layout_width="match_parent"
