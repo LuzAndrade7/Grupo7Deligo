@@ -9,5 +9,5 @@ buildscript {
     }
 }
 
-allprojects {
+allprojects{
 }
