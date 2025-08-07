@@ -57,8 +57,8 @@ class PhoneNumberActivity : AppCompatActivity() {
             val phoneNumber = editTextPhone.text.toString().trim()
 
             if (validatePhoneNumber(phoneNumber)) {
-                // Si el teléfono es válido, ir a Home
-                navigateToHome()
+                // Si el teléfono es válido, ir a RegistroActivity
+                navigateToRegistroActivity()
             } else {
                 // Mostrar error si el teléfono no tiene 10 dígitos
                 Toast.makeText(this, "El número debe tener 10 dígitos", Toast.LENGTH_SHORT).show()
@@ -91,8 +91,8 @@ class PhoneNumberActivity : AppCompatActivity() {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Inicio de sesión exitoso, redirigir a Home
-                    navigateToHome()
+                    // Inicio de sesión exitoso, redirigir a RegistroActivity
+                    navigateToRegistroActivity()
                 } else {
                     // Error en el inicio de sesión
                     Toast.makeText(this, "Autenticación fallida", Toast.LENGTH_SHORT).show()
@@ -106,8 +106,8 @@ class PhoneNumberActivity : AppCompatActivity() {
         return cleanPhone.length == 10
     }
 
-    private fun navigateToHome() {
-        val intent = Intent(this, Home::class.java)
+    private fun navigateToRegistroActivity() {
+        val intent = Intent(this, RegistroActivity::class.java)
         startActivity(intent)
         finish() // Opcional: para que no pueda volver con el botón atrás
     }
