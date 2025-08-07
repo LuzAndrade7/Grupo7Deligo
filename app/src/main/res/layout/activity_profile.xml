@@ -49,10 +49,11 @@ android:background="#F5F5F5">
                 android:id="@+id/tv_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nombre"
+                android:text=""
                 android:textColor="#333333"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
 
             <TextView
                 android:id="@+id/tv_view_account"

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Deligo</string>
     <string name="back">Volver</string>
-    <string name="IngresaNumero">Ingresa tu número telefónico</string>
+    <string name="IngresaNumero">Registrate con tu numero de telefono</string>
     <string name="CodNumero">+593</string>
     <string name="Numero">número de teléfono</string>
     <string name="TextContinue">Continuar</string>
@@ -128,6 +128,10 @@
     <string name="icono_ubicacion">icono_ubicacion</string>
     <string name="icono_de_pago">icono_pago</string>
     <string name="icono_de_tarjeta">icono_tarjeta</string>
+
+    <!-- autenticacion google -->
+
+    <string name="default_web_client_id">158639860011-3c38uvke1idsq16r79obb13e23i7pcf5.apps.googleusercontent.com</string>
 
 
 </resources>
