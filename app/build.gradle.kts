@@ -37,19 +37,21 @@ android {
 }
 
 dependencies {
+    // Firebase BOM (Bill of Materials)
+    implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
 
+    // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    // Otras dependencias necesarias
+    implementation("com.google.android.gms:play-services-auth:20.1.0")
+
+    // Otras dependencias
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth.ktx)
-
-    // Firebase Authentication
-    implementation("com.google.firebase:firebase-auth:21.0.7")
-
-    implementation("com.google.android.gms:play-services-auth:20.1.0")  // Agregar Google Sign-In
-
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

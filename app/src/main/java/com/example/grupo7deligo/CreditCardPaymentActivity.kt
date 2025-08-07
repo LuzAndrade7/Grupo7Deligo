@@ -39,6 +39,7 @@ class CreditCardPaymentActivity : AppCompatActivity() {
 
         // Configurar TextWatchers para formatear los campos de tarjeta
         setupTextWatchers()
+
     }
 
     private fun initViews() {
@@ -49,7 +50,6 @@ class CreditCardPaymentActivity : AppCompatActivity() {
         etCardholderName = findViewById(R.id.et_cardholder_name)
         cbSaveCard = findViewById(R.id.cb_save_card)
         btnPayNow = findViewById(R.id.btn_pay_now)
-        btnBack = findViewById(R.id.btn_back)  // Inicializamos el botón de retroceso
         tvTotalAmount = findViewById(R.id.tv_total_amount)
 
         // Establecer el monto total en el TextView
@@ -58,10 +58,6 @@ class CreditCardPaymentActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        // Configurar el botón de retroceso para cerrar la actividad
-        btnBack.setOnClickListener {
-            finish()  // Cerrar la actividad y volver a la pantalla anterior
-        }
 
         // Configurar el botón de pago
         btnPayNow.setOnClickListener {
