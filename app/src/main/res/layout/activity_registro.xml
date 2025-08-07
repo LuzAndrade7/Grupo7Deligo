@@ -25,33 +25,10 @@
             android:contentDescription="@string/back" />
 
         <!-- Pregunta de correo -->
-        <TextView
-            android:id="@+id/textEmailQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question_email"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/black"
-            android:layout_marginTop="24dp" />
+
 
         <!-- Input de correo -->
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:autofillHints=""
-            android:background="@drawable/bg_input_rectangle"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/dark_grey"
-            android:fontFamily="@font/montserrat"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp" />
+
 
         <!-- Título datos personales -->
         <TextView

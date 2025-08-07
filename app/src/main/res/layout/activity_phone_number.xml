@@ -202,32 +202,7 @@
             app:layout_constraintEnd_toEndOf="parent">
 
             <!-- Botón Apple -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="12dp"
-                android:orientation="horizontal"
-                android:background="@drawable/bg_input_rectangle"
-                android:gravity="center"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_apple"
-                    android:contentDescription="@string/TextInicioApple"
-                    android:layout_marginEnd="12dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/TextInicioApple"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
 
             <!-- Botón Google -->
             <LinearLayout
@@ -258,31 +233,7 @@
             </LinearLayout>
 
             <!-- Botón Email -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:background="@drawable/bg_input_rectangle"
-                android:gravity="center"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_email"
-                    android:contentDescription="@string/TextIinicioEmail"
-                    android:layout_marginEnd="12dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/TextIinicioEmail"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
         </LinearLayout>
 
 

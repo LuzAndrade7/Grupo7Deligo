@@ -12,7 +12,12 @@
           "package_name": "com.example.deligo"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "158639860011-3c38uvke1idsq16r79obb13e23i7pcf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBz4bDNp7XxYiU9A0L6-w3sj7hj-_U2Rm0"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158639860011-3c38uvke1idsq16r79obb13e23i7pcf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
