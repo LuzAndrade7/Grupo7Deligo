@@ -156,7 +156,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/cajita_feliz_hamburguesa"
+                        android:text="@string/menuEncebollado"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -213,7 +213,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
-                    android:contentDescription="@string/cajita_feliz_hamburguesa"
+                    android:contentDescription="@string/menuEncebollado"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cajita_feliz_hamburguesa" />
 
@@ -242,7 +242,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/cajita_feliz_hamburguesa"
+                        android:text="@string/menuEncebollado"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -274,7 +274,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/cajita_feliz_hamburguesa"
+                    android:contentDescription="@string/menuEncebollado"
                     android:src="@drawable/cajita_feliz_hamburguesa" />
 
             </LinearLayout>
@@ -303,7 +303,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/cajita_feliz_hamburguesa"
+                        android:text="@string/menuEncebollado"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -335,7 +335,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/cajita_feliz_hamburguesa"
+                    android:contentDescription="@string/menuEncebollado"
                     android:src="@drawable/cajita_feliz_hamburguesa" />
 
             </LinearLayout>
@@ -364,7 +364,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/cajita_feliz_hamburguesa"
+                        android:text="@string/menuEncebollado"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -396,7 +396,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/cajita_feliz_hamburguesa"
+                    android:contentDescription="@string/menuEncebollado"
                     android:src="@drawable/cajita_feliz_hamburguesa" />
 
             </LinearLayout>

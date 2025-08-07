@@ -7,20 +7,37 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
-
+import com.google.firebase.firestore.FirebaseFirestore
 class RegistroActivity : AppCompatActivity() {
+
     private lateinit var editTextFirstName: EditText
     private lateinit var editTextLastName: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonContinue: MaterialButton
     private lateinit var backButton: ImageView
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
+        // Inicializar Firestore
+        firestore = FirebaseFirestore.getInstance()
+
+        // Inicializar las vistas
         initViews()
-        setupClickListeners()
+
+        // Obtener los datos de PhoneNumberActivity
+        val firstName = intent.getStringExtra("FIRST_NAME")
+        val lastName = intent.getStringExtra("LAST_NAME")
+        val email = intent.getStringExtra("EMAIL")
+        val phone = intent.getStringExtra("PHONE")
+
+        // Aquí puedes prellenar los campos con los datos recibidos si es necesario
+        editTextFirstName.setText(firstName)
+        editTextLastName.setText(lastName)
+
+        setupClickListeners(firstName, lastName, email, phone)
     }
 
     private fun initViews() {
@@ -31,17 +48,18 @@ class RegistroActivity : AppCompatActivity() {
         backButton = findViewById(R.id.backButton)
     }
 
-    private fun setupClickListeners() {
+    private fun setupClickListeners(firstName: String?, lastName: String?, email: String?, phone: String?) {
         // Botón continuar
         buttonContinue.setOnClickListener {
             if (validateForm()) {
-                navigateToHome()  // Después de validar, se va a Home
+                // Si la validación es exitosa, guardar los datos y navegar al inicio
+                saveUserDataToFirestore(firstName, lastName, email, phone)
             }
         }
 
         // Botón de regreso
         backButton.setOnClickListener {
-            finish()
+            finish() // Cerrar esta actividad y regresar
         }
     }
 
@@ -80,7 +98,7 @@ class RegistroActivity : AppCompatActivity() {
                 false
             }
             else -> {
-                Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Formulario válido", Toast.LENGTH_SHORT).show()
                 true
             }
         }
@@ -99,23 +117,47 @@ class RegistroActivity : AppCompatActivity() {
     }
 
     private fun isValidName(name: String): Boolean {
-        // Verificar que el nombre tenga al menos 2 caracteres y solo contenga letras y espacios
         return name.length >= 2 && name.matches(Regex("^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$"))
     }
 
     private fun isValidPassword(password: String): Boolean {
-        // Verificar que la contraseña tenga al menos 6 caracteres, una mayúscula, una minúscula y un número
         return password.length >= 6 &&
                 password.any { it.isUpperCase() } &&
                 password.any { it.isLowerCase() } &&
                 password.any { it.isDigit() }
     }
 
+    private fun saveUserDataToFirestore(firstName: String?, lastName: String?, email: String?, phone: String?) {
+        // Recoger los datos del formulario
+        val firstName = firstName ?: ""
+        val lastName = lastName ?: ""
+        val email = email ?: ""
+        val password = editTextPassword.text.toString().trim()
+
+        val userData = hashMapOf(
+            "firstName" to firstName,
+            "lastName" to lastName,
+            "email" to email,
+            "phone" to phone,
+            "password" to password // Este es un ejemplo, nunca deberías guardar contraseñas en texto plano en Firestore
+        )
+
+        firestore.collection("users").add(userData)
+            .addOnSuccessListener {
+                // Datos guardados correctamente
+                Toast.makeText(this, "Usuario guardado en Firestore", Toast.LENGTH_SHORT).show()
+                // Redirigir a Home o a la siguiente actividad
+                navigateToHome()
+            }
+            .addOnFailureListener { e ->
+                // Error al guardar los datos
+                Toast.makeText(this, "Error al guardar el usuario: $e", Toast.LENGTH_SHORT).show()
+            }
+    }
+
     private fun navigateToHome() {
         val intent = Intent(this, Home::class.java)
-        // Pasar datos opcionales a Home
-        intent.putExtra("USER_NAME", "${editTextFirstName.text} ${editTextLastName.text}")
         startActivity(intent)
-        finish() // Para que no pueda volver con el botón atrás
+        finish() // Opcional: para que no pueda regresar a la pantalla de registro
     }
 }

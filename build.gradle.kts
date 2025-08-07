@@ -4,10 +4,12 @@ plugins {
 }
 
 buildscript {
+    repositories {
+        google()  // Repositorio de Google
+        mavenCentral()
+    }
     dependencies {
+        // Clase del plugin de Google Services
         classpath("com.google.gms:google-services:4.3.15")
     }
-}
-
-allprojects {
 }

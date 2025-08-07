@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cajita Feliz Hamburguesa"
+                    android:text="Del Montubio"
                     android:textColor="#666666"
                     android:textSize="14sp"
                     android:layout_marginBottom="4dp" />
@@ -134,7 +134,7 @@
                     android:id="@+id/et_card_number"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:hint="1234 5678 9012 3456"
                     android:inputType="number"
                     android:maxLength="19"
@@ -260,7 +260,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Tu información está protegida con encriptación SSL de 256 bits"
+                    android:text="Tu información está protegida"
                     android:textColor="#2E7D32"
                     android:textSize="12sp" />
 
@@ -274,8 +274,8 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@android:color/black"
-            android:text="Pagar Ahora - $7.01"
-            android:textColor="@android:color/white"
+            android:text="Pagar Ahora"
+            android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />

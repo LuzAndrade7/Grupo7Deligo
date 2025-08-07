@@ -1,114 +1,101 @@
 package com.example.deligo
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
+import android.os.Bundle
 import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.Toast
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.android.material.button.MaterialButton
+import com.google.firebase.FirebaseApp
 
 class PhoneNumberActivity : AppCompatActivity() {
+
     private lateinit var editTextPhone: EditText
+    private lateinit var editTextEmail: EditText
     private lateinit var buttonContinue: MaterialButton
-    private lateinit var googleButton: LinearLayout
-    private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var buttonGoogleSignIn: MaterialButton
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_number)
+
+        // Inicializar Firebase si no está ya inicializado
+        if (FirebaseApp.getApps(this).isEmpty()) {
+            FirebaseApp.initializeApp(this)
+        }
+
+        // Inicializar Firestore
+        firestore = FirebaseFirestore.getInstance()
+
+        // Inicializar las vistas
         initViews()
-        setupGoogleSignIn()
     }
 
     private fun initViews() {
+        // Asignar las vistas a las variables
         editTextPhone = findViewById(R.id.editTextPhone)
+        editTextEmail = findViewById(R.id.editTextMail)
         buttonContinue = findViewById(R.id.buttonContinue)
+        buttonGoogleSignIn = findViewById(R.id.buttonGoogleSignIn)
 
-        // Los botones sociales son LinearLayouts en tu diseño
-        val socialButtonsContainer = findViewById<LinearLayout>(R.id.socialButtonsContainer)
-        googleButton = socialButtonsContainer.getChildAt(0) as LinearLayout  // Asegúrate de que este sea el botón de Google
-    }
-
-    private fun setupGoogleSignIn() {
-        // Configura Google Sign-In
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))  // Usamos el ID de cliente que agregamos en strings.xml
-            .requestEmail()
-            .build()
-
-        googleSignInClient = GoogleSignIn.getClient(this, gso)
-        firebaseAuth = FirebaseAuth.getInstance()
-
-        // Manejo del clic en el botón de Google
-        googleButton.setOnClickListener {
-            signInWithGoogle()
-        }
-
-        // Continuar con teléfono
+        // Configurar el botón de continuar
         buttonContinue.setOnClickListener {
             val phoneNumber = editTextPhone.text.toString().trim()
 
             if (validatePhoneNumber(phoneNumber)) {
-                // Si el teléfono es válido, ir a RegistroActivity
-                navigateToRegistroActivity()
+                // Obtener el correo desde el campo de texto
+                val email = editTextEmail.text.toString().trim()
+
+                // Guardar los datos en Firestore
+                saveUserToFirestore(phoneNumber, email)
             } else {
                 // Mostrar error si el teléfono no tiene 10 dígitos
                 Toast.makeText(this, "El número debe tener 10 dígitos", Toast.LENGTH_SHORT).show()
             }
         }
-    }
 
-    private fun signInWithGoogle() {
-        val signInIntent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, 9001)  // Usamos 9001 como código de solicitud
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == 9001) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                firebaseAuthWithGoogle(account.idToken)
-            } catch (e: ApiException) {
-                // Error en el inicio de sesión con Google
-                Toast.makeText(this, "Error en el inicio de sesión con Google", Toast.LENGTH_SHORT).show()
-            }
+        // Configuración para el botón de Google
+        buttonGoogleSignIn.setOnClickListener {
+            // Redirigir a la actividad de GoogleRegistro
+            val intent = Intent(this, GoogleRegistroActivity::class.java)
+            startActivity(intent)
         }
     }
 
-    private fun firebaseAuthWithGoogle(idToken: String?) {
-        val credential = GoogleAuthProvider.getCredential(idToken, null)
-        firebaseAuth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Inicio de sesión exitoso, redirigir a RegistroActivity
-                    navigateToRegistroActivity()
-                } else {
-                    // Error en el inicio de sesión
-                    Toast.makeText(this, "Autenticación fallida", Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
-
+    // Validar número de teléfono (solo dígitos y 10 caracteres)
     private fun validatePhoneNumber(phoneNumber: String): Boolean {
-        // Remover espacios y caracteres especiales, solo conservar dígitos
         val cleanPhone = phoneNumber.replace(Regex("[^\\d]"), "")
         return cleanPhone.length == 10
     }
 
-    private fun navigateToRegistroActivity() {
-        val intent = Intent(this, RegistroActivity::class.java)
-        startActivity(intent)
-        finish() // Opcional: para que no pueda volver con el botón atrás
+    // Función para guardar el número de teléfono y correo en Firestore
+    private fun saveUserToFirestore(phoneNumber: String, email: String) {
+        // Crear un mapa con los datos del usuario
+        val userData = hashMapOf(
+            "phone" to phoneNumber,
+            "email" to email
+        )
+
+        // Guardar los datos en Firestore
+        firestore.collection("users").document(email)  // Usamos el correo como ID del documento
+            .set(userData)
+            .addOnSuccessListener {
+                // Datos guardados correctamente
+                Toast.makeText(this, "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show()
+
+                // Redirigir a RegistroActivity y pasar los datos necesarios
+                val intent = Intent(this, RegistroActivity::class.java).apply {
+                    putExtra("EMAIL", email)
+                    putExtra("PHONE", phoneNumber)
+                }
+                startActivity(intent)
+                finish()  // Cierra esta actividad
+            }
+            .addOnFailureListener { e ->
+                // Error al guardar los datos
+                Toast.makeText(this, "Error al registrar el usuario: $e", Toast.LENGTH_SHORT).show()
+            }
     }
 }

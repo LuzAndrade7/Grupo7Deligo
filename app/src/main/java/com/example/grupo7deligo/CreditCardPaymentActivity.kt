@@ -210,7 +210,7 @@ class CreditCardPaymentActivity : AppCompatActivity() {
                     "Tarjeta: $maskedCardNumber\n" +
                     "Monto: $totalAmount\n" +
                     "Fecha: ${java.text.SimpleDateFormat("dd/MM/yyyy HH:mm", java.util.Locale.getDefault()).format(java.util.Date())}\n\n" +
-                    "Cajita Feliz Hamburguesa\n" +
+                    "Encebollado\n" +
                     "Tiempo estimado: 25-30 minutos\n\n" +
                     "Recibirás una notificación cuando tu pedido esté listo."
         )

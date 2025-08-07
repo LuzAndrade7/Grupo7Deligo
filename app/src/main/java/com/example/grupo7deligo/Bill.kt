@@ -107,7 +107,7 @@ class Bill : AppCompatActivity() {
     private fun mostrarExitoPago() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("¡Pago Exitoso!")
-        builder.setMessage("Tu pedido ha sido confirmado.\n\nCajita Feliz Hamburguesa\nTiempo estimado: 25-30 minutos")
+        builder.setMessage("Tu pedido ha sido confirmado.\n\nEncebollado\nTiempo estimado: 25-30 minutos")
 
         builder.setPositiveButton("Aceptar") { dialog, _ ->
             dialog.dismiss()

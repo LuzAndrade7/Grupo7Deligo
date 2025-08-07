@@ -24,12 +24,6 @@
             android:src="@drawable/ic_back_arrow"
             android:contentDescription="@string/back" />
 
-        <!-- Pregunta de correo -->
-
-
-        <!-- Input de correo -->
-
-
         <!-- Título datos personales -->
         <TextView
             android:id="@+id/textYourData"
@@ -41,6 +35,24 @@
             android:fontFamily="@font/montserrat"
             android:textColor="@color/black"
             android:layout_marginTop="24dp" />
+
+        <!-- Correo -->
+        <EditText
+            android:id="@+id/editTextMail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_rectangle"
+            android:hint="@string/hint_mail"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/dark_grey"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            tools:ignore="Autofill" />
 
         <!-- Nombre -->
         <EditText

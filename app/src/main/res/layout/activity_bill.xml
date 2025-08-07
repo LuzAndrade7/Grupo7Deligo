@@ -35,7 +35,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/mcdonald_s"
+            android:text="@string/LocalMontubio"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -266,7 +266,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cajita_feliz_hamburguesa"
+                android:text="@string/menuEncebollado"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -284,7 +284,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:contentDescription="@string/cajita_feliz_hamburguesa"
+            android:contentDescription="@string/menuEncebollado"
             android:scaleType="centerCrop"
             android:src="@drawable/cajita_feliz_hamburguesa" />
 

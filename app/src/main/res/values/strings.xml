@@ -65,7 +65,7 @@
     <string name="_1">1</string>
     <string name="icono_menos">icono_menos</string>
     <string name="_5_99">$ 5.99</string>
-    <string name="cajita_feliz_hamburguesa">Cajita Feliz Hamburguesa</string>
+    <string name="menuEncebollado">Encebollado</string>
     <string name="agregar">Agregar</string>
     <string name="ver_carrito_5_99">Ver carrito • $ 5.99</string>
     <string name="icono_cerrar">Cerrar</string>
@@ -110,6 +110,8 @@
     <string name="pizza_italian_pasta">Pizza • Italian • Pasta</string>
     <string name="pagar">Pagar</string>
     <string name="FraseInicial">Tu comida, tu barrio, tu Deligo.</string>
+    <string name="hint_mail">Correo electrónico</string>
+
 
     <!-- LOCALES -->
     <string name="LocalRosita">Restaurante Doña Rosita</string>

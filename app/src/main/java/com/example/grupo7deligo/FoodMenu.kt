@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -12,11 +13,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class FoodMenu : AppCompatActivity() {
+
     private lateinit var btnViewCart: TextView
+    private lateinit var btnBack: ImageView  // Declarar el botón de retroceso
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge()  // Habilitar el borde completo (si es necesario para tu diseño)
         setContentView(R.layout.activity_food_menu)
 
         // Configurar edge-to-edge
@@ -26,27 +29,15 @@ class FoodMenu : AppCompatActivity() {
             insets
         }
 
-        initViews()
-        setupClickListeners()
-    }
-    @SuppressLint("QueryPermissionsNeeded")
-    private fun setupClickListeners() {
-        btnViewCart.setOnClickListener { view ->
-            // Alternativa más explícita
-            val intent = Intent()
-            intent.setClass(this@FoodMenu, Bill::class.java)
-
-            if (intent.resolveActivity(packageManager) != null) {
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "No se pudo encontrar la actividad Bill", Toast.LENGTH_LONG).show()
-            }
-        }
+        initViews()  // Inicializar las vistas
+        setupClickListeners()  // Configurar los listeners de los botones
     }
 
     private fun initViews() {
         try {
-            btnViewCart = findViewById(R.id.cart_button)
+            btnViewCart = findViewById(R.id.cart_button)  // Inicializar el botón del carrito
+            btnBack = findViewById(R.id.btn_back)  // Inicializar el botón de retroceso
+
             Log.d("FoodMenu", "Botón encontrado correctamente")
         } catch (e: Exception) {
             Log.e("FoodMenu", "Error al encontrar el botón: ${e.message}")
@@ -54,5 +45,21 @@ class FoodMenu : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
+    private fun setupClickListeners() {
+        // Configurar el botón de ver carrito
+        btnViewCart.setOnClickListener {
+            val intent = Intent(this@FoodMenu, Bill::class.java)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "No se pudo encontrar la actividad Bill", Toast.LENGTH_LONG).show()
+            }
+        }
 
+        // Configurar el botón de retroceso
+        btnBack.setOnClickListener {
+            onBackPressed()  // Esto regresará a la pantalla anterior
+        }
+    }
 }
