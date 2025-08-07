@@ -78,7 +78,7 @@ class GoogleRegistroActivity : AppCompatActivity() {
     private fun navigateToHomeActivity() {
         // Navegar a la actividad principal después del registro
         val intent = Intent(this, Home::class.java)
-        startActivity(intent)
+            startActivity(intent)
         finish()
     }
 }

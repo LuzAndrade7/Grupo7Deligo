@@ -286,7 +286,7 @@
             android:layout_height="60dp"
             android:contentDescription="@string/menuEncebollado"
             android:scaleType="centerCrop"
-            android:src="@drawable/cajita_feliz_hamburguesa" />
+            android:src="@drawable/menumontubio1" />
 
     </LinearLayout>
 

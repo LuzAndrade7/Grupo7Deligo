@@ -215,7 +215,7 @@
                     android:layout_marginStart="16dp"
                     android:contentDescription="@string/menuEncebollado"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/cajita_feliz_hamburguesa" />
+                    android:src="@drawable/menumontubio1" />
 
             </LinearLayout>
 
@@ -242,7 +242,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/menuEncebollado"
+                        android:text="@string/menurosita2"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -274,8 +274,8 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/menuEncebollado"
-                    android:src="@drawable/cajita_feliz_hamburguesa" />
+                    android:contentDescription="@string/menurosita2"
+                    android:src="@drawable/menurosita1" />
 
             </LinearLayout>
 
@@ -303,7 +303,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/menuEncebollado"
+                        android:text="@string/menurosita1"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -335,8 +335,8 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/menuEncebollado"
-                    android:src="@drawable/cajita_feliz_hamburguesa" />
+                    android:contentDescription="@string/menurosita1"
+                    android:src="@drawable/menusalchipapa1" />
 
             </LinearLayout>
 
@@ -364,7 +364,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/menuEncebollado"
+                        android:text="@string/menuEncebollado2"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -397,7 +397,7 @@
                     android:layout_marginStart="16dp"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/menuEncebollado"
-                    android:src="@drawable/cajita_feliz_hamburguesa" />
+                    android:src="@drawable/menumontubio2" />
 
             </LinearLayout>
 

@@ -52,11 +52,11 @@
     <string name="env_o_gratis">Envío gratis</string>
     <string name="detalles_envio">Disfruta de este descuento exclusivo en tu pedido pagando con métodos de pago seleccionados</string>
     <string name="enlace">Como funciona?</string>
-    <string name="mccombos">McCombos</string>
+    <string name="mccombos">Combos</string>
     <string name="icono_desplegable">icono_desplegable</string>
     <string name="los_m_s_populares">Los más populares</string>
     <string name="icono_buscar">icono Buscar</string>
-    <string name="titulo_item">McCombo Mediano Big Mac</string>
+    <string name="titulo_item">Encebollado Completo</string>
     <string name="precio">$ 5.99</string>
     <string name="boton_agregar">Agregar</string>
     <string name="imagenitem">imagenitem</string>
@@ -66,6 +66,9 @@
     <string name="icono_menos">icono_menos</string>
     <string name="_5_99">$ 5.99</string>
     <string name="menuEncebollado">Encebollado</string>
+    <string name="menuEncebollado2">Ceviche</string>
+    <string name="menurosita1">Salchipapa</string>
+    <string name="menurosita2">Almuerzo</string>
     <string name="agregar">Agregar</string>
     <string name="ver_carrito_5_99">Ver carrito • $ 5.99</string>
     <string name="icono_cerrar">Cerrar</string>
@@ -122,7 +125,7 @@
     <string name="restauranteMontubio">Restaurante de comida costeña</string>
 
     <!-- FACTURA -->
-    <string name="direccionEntrega">Dirección de entrega</string>
+    <string name="direccionEntrega">Av 6 de Diciembre</string>
     <string name="metodoPago">Método de pago</string>
     <string name="pagoEfectivo">Efectivo</string>
     <string name="pagoTarjeta">Tarjeta</string>

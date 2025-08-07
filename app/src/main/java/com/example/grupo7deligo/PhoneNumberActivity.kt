@@ -1,3 +1,5 @@
+
+
 package com.example.deligo
 
 import android.content.Intent
@@ -12,6 +14,8 @@ import com.google.firebase.FirebaseApp
 class PhoneNumberActivity : AppCompatActivity() {
 
     private lateinit var editTextPhone: EditText
+    private lateinit var editTextFirstName: EditText
+    private lateinit var editTextLastName: EditText
     private lateinit var editTextEmail: EditText
     private lateinit var buttonContinue: MaterialButton
     private lateinit var buttonGoogleSignIn: MaterialButton
@@ -36,6 +40,8 @@ class PhoneNumberActivity : AppCompatActivity() {
     private fun initViews() {
         // Asignar las vistas a las variables
         editTextPhone = findViewById(R.id.editTextPhone)
+        editTextFirstName = findViewById(R.id.editTextFirstName)
+        editTextLastName = findViewById(R.id.editTextLastName)
         editTextEmail = findViewById(R.id.editTextMail)
         buttonContinue = findViewById(R.id.buttonContinue)
         buttonGoogleSignIn = findViewById(R.id.buttonGoogleSignIn)
@@ -45,18 +51,20 @@ class PhoneNumberActivity : AppCompatActivity() {
             val phoneNumber = editTextPhone.text.toString().trim()
 
             if (validatePhoneNumber(phoneNumber)) {
-                // Obtener el correo desde el campo de texto
+                // Obtener los datos del usuario desde los campos de texto
+                val firstName = editTextFirstName.text.toString().trim()
+                val lastName = editTextLastName.text.toString().trim()
                 val email = editTextEmail.text.toString().trim()
 
                 // Guardar los datos en Firestore
-                saveUserToFirestore(phoneNumber, email)
+                saveUserToFirestore(firstName, lastName, email, phoneNumber)
             } else {
                 // Mostrar error si el teléfono no tiene 10 dígitos
                 Toast.makeText(this, "El número debe tener 10 dígitos", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Configuración para el botón de Google
+        // Configurar el botón de Google
         buttonGoogleSignIn.setOnClickListener {
             // Redirigir a la actividad de GoogleRegistro
             val intent = Intent(this, GoogleRegistroActivity::class.java)
@@ -70,32 +78,31 @@ class PhoneNumberActivity : AppCompatActivity() {
         return cleanPhone.length == 10
     }
 
-    // Función para guardar el número de teléfono y correo en Firestore
-    private fun saveUserToFirestore(phoneNumber: String, email: String) {
+    private fun saveUserToFirestore(firstName: String, lastName: String, email: String, phoneNumber: String) {
         // Crear un mapa con los datos del usuario
         val userData = hashMapOf(
-            "phone" to phoneNumber,
-            "email" to email
+            "firstName" to firstName,
+            "lastName" to lastName,
+            "email" to email,
+            "phone" to phoneNumber
         )
 
-        // Guardar los datos en Firestore
+        // Guardar los datos del usuario en Firestore
         firestore.collection("users").document(email)  // Usamos el correo como ID del documento
             .set(userData)
             .addOnSuccessListener {
-                // Datos guardados correctamente
                 Toast.makeText(this, "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show()
-
-                // Redirigir a RegistroActivity y pasar los datos necesarios
-                val intent = Intent(this, RegistroActivity::class.java).apply {
-                    putExtra("EMAIL", email)
-                    putExtra("PHONE", phoneNumber)
-                }
-                startActivity(intent)
-                finish()  // Cierra esta actividad
+                navigateToHomeActivity()  // Navegar a la actividad principal
             }
             .addOnFailureListener { e ->
-                // Error al guardar los datos
                 Toast.makeText(this, "Error al registrar el usuario: $e", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun navigateToHomeActivity() {
+        // Navegar a la actividad principal después del registro
+        val intent = Intent(this, Home::class.java)
+        startActivity(intent)
+        finish()  // Para que no pueda regresar a esta pantalla con el botón atrás
     }
 }

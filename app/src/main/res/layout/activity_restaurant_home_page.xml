@@ -365,7 +365,7 @@ tools:context=".RestaurantHomePage">
                     android:layout_marginStart="16dp"
                     android:contentDescription="@string/imagenitem"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/big_mac_combo" />
+                    android:src="@drawable/menumontubio1" />
 
             </LinearLayout>
 
