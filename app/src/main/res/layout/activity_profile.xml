@@ -119,193 +119,16 @@ android:background="#F5F5F5">
             </LinearLayout>
 
             <!-- Cartera -->
-            <LinearLayout
-                android:id="@+id/ll_wallet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/cartera"
-                    android:src="@drawable/ic_cartera" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/cartera"
-                    android:text="@string/cartera"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
 
             <!-- Preferencias del negocio -->
-            <LinearLayout
-                android:id="@+id/ll_business_preferences"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/regalo"
-                    android:src="@drawable/ic_regalo" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/preferencias_del_negocio"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/agregar_los_favoritos_de_tu_negocio_de_forma_m_s_r_pida_y_sencilla"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
 
             <!-- Ayuda -->
-            <LinearLayout
-                android:id="@+id/ll_help"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/ayuda"
-                    android:src="@drawable/ic_info" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ayuda"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
 
             <!-- Promociones -->
-            <LinearLayout
-                android:id="@+id/ll_promotions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/promociones"
-                    android:src="@drawable/ic_promocion" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/promociones"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
 
             <!-- Notificaciones -->
-            <LinearLayout
-                android:id="@+id/ll_notifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/notificaciones"
-                    android:src="@drawable/ic_noti" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/notificaciones"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
 
             <!-- Envío con Uber -->
-            <LinearLayout
-                android:id="@+id/ll_uber_delivery"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/env_o_con_uber"
-                    android:src="@drawable/ic_uber" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/env_o_con_uber"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -384,33 +207,6 @@ android:background="#F5F5F5">
         </LinearLayout>
 
         <!-- Pedidos -->
-        <LinearLayout
-            android:id="@+id/ll_nav_orders"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="@string/pedidos"
-                android:src="@drawable/ic_pedido" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/pedidos"
-                android:textColor="#666666"
-                android:textSize="12sp" />
-
-        </LinearLayout>
 
         <!-- Cuenta -->
         <LinearLayout

@@ -1,9 +1,7 @@
-// build.gradle (Nivel de Aplicación)
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id ("com.google.gms.google-services")
+    id("com.google.gms.google-services")  // Agregar esto para habilitar Google Services
 }
 
 android {
@@ -29,26 +27,24 @@ android {
             )
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
 dependencies {
-    // Firebase BOM (Bill of Materials) para gestionar las versiones de Firebase
+    // Firebase BOM (Bill of Materials)
     implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
 
-    // Firebase Authentication (si lo necesitas)
+    // Firebase Authentication
     implementation("com.google.firebase:firebase-auth-ktx")
 
-    // Firestore (si lo necesitas)
-    implementation("com.google.firebase:firebase-firestore-ktx")
+    // Otras dependencias necesarias
+    implementation("com.google.android.gms:play-services-auth:20.1.0")
 
     // Otras dependencias
     implementation(libs.androidx.core.ktx)
@@ -57,7 +53,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // Dependencias para pruebas
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

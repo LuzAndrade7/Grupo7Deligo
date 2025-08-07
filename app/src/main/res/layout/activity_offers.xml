@@ -27,7 +27,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/iv_back_arrow"
+            android:id="@+id/btn_back"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:contentDescription="@string/iconoregresar"
@@ -338,7 +338,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/ll_nav_inicios"
+            android:id="@+id/ll_nav_home"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -367,7 +367,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_nav_explorar"
+            android:id="@+id/ll_nav_explore"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -397,37 +397,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_nav_pedidos"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            tools:ignore="UseCompoundDrawables">
-
-            <ImageView
-                android:id="@+id/iv_nav_pedidos"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="@string/pedidos"
-                android:src="@drawable/ic_pedido" />
-
-            <TextView
-                android:id="@+id/tv_nav_pedidos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/pedidos"
-                android:textColor="#999999"
-                android:textSize="12sp"
-                tools:ignore="TextContrastCheck" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_nav_cuenta"
+            android:id="@+id/ll_nav_account"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
